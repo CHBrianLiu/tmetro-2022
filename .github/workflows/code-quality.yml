@@ -1,0 +1,24 @@
+name: "Code quality check"
+
+on:
+  pull_request:
+    branches:
+      - "main"
+
+jobs:
+  next-lint:
+    runs-on: ubuntu-latest
+    name: "Run next lint"
+    steps:
+      - uses: actions/checkout@v2
+      - run: "npm install --include=dev"
+      - id: lint
+        run: "npm run lint"
+
+  formatting-check:
+    runs-on: ubuntu-latest
+    name: "Run Prettier check"
+    steps:
+      - uses: actions/checkout@v2
+      - run: "npm install --include=dev"
+      - run: "prettier -c components/*.js pages/*.js"
