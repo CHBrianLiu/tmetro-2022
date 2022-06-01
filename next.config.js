@@ -5,6 +5,6 @@ const nextConfig = {
     // For components/Image.js
     loader: "custom",
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
