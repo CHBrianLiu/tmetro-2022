@@ -7,7 +7,7 @@
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier -w components/**/*.js pages/**/*.js"
+    "format": "prettier -w **/*.ts **/*.tsx"
   },
   "dependencies": {
     "next": "12.1.6",
