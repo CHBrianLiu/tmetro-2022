@@ -27,4 +27,4 @@ jobs:
         with:
           node-version: 16
       - run: "npm install -g prettier"
-      - run: "prettier -c components/*.js pages/*.js"
+      - run: "npm run check-format"
