@@ -2,6 +2,7 @@ import Head from "next/head";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
 import Banner from "../components/Banner";
+import styles from "../styles/Layout.module.css";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -34,7 +35,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#f7f7f8" />
       </Head>
       <Banner />
-      <Component {...pageProps} />
+      <div className={styles.page}>
+        <Component {...pageProps} />
+      </div>
     </>
   );
 }
