@@ -1,7 +1,7 @@
 import styles from "../styles/Banner.module.css";
-import Logo from "../assets/metro-logo.svg";
-import Menu from "../assets/hamburger-menu.svg";
-import Notification from "../assets/notification-bell.svg";
+import Logo from "../assets/banner.metro-logo.svg";
+import Menu from "../assets/banner.hamburger-menu.svg";
+import Notification from "../assets/banner.notification-bell.svg";
 import Image from "next/image";
 
 const Banner = () => {

@@ -1,0 +1,19 @@
+.TabBar {
+    height: 90px;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ButtonImage{
+    height: 28px;
+    width: 31px;
+}
