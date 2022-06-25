@@ -5,6 +5,7 @@
     bottom: 0;
     display: flex;
     justify-content: space-around;
+    background: #f7f7f8;
 }
 
 .button {
@@ -13,7 +14,7 @@
     justify-content: center;
 }
 
-.ButtonImage{
+.ButtonImage {
     height: 28px;
     width: 31px;
 }
