@@ -1,8 +1,8 @@
 {
-  "name": "Next.JS Progressive Web App",
-  "short_name": "Next PWA",
+  "name": "Taipei Metro Go - Demo",
+  "short_name": "MetroDemo",
   "theme_color": "#ffffff",
-  "background_color": "#004740",
+  "background_color": "#f7f7f7",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",
