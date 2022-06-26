@@ -18,3 +18,7 @@
     height: 28px;
     width: 31px;
 }
+
+.CurrentSelected {
+    filter: invert(57%) sepia(93%) saturate(4490%) hue-rotate(204deg) brightness(100%) contrast(91%);
+}
