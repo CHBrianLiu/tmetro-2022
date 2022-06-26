@@ -1,23 +1,53 @@
-# Progressive Web App Example
+# TMetro* Group 2 Demo
 
-This example uses [`next-pwa`](https://github.com/shadowwalker/next-pwa) to create a progressive web app (PWA) powered by [Workbox](https://developers.google.com/web/tools/workbox/).
+## Introduction
 
-## Deploy your own
+[TODO]
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
+## Tech stack
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/progressive-web-app&project-name=progressive-web-app&repository-name=progressive-web-app)
+* Next.JS
+  * TypeScript
+  * React
+  * Progressive Web App (PWA)
+* Hosting
+  * Azure Static Web Apps
 
-## How to use
+## Development
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+### Get started
 
-```bash
-npx create-next-app --example progressive-web-app progressive-web-app
-# or
-yarn create next-app --example progressive-web-app progressive-web-app
-# or
-pnpm create next-app --example progressive-web-app progressive-web-app
+1. Install dependencies.
+
+    ```shell
+    npm install -D
+    ```
+
+2. Start the development server.
+
+    ```shell
+    npm run dev
+    ```
+
+3. Open *http://localhost:3000* in your browser.
+
+### Auto-formatting
+
+```shell
+npm run format
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+### Code quality
+
+```shell
+npm run lint
+npm run check-format
+```
+
+## Deployment
+
+### Generate static website files
+
+```shell
+npm run build
+```
