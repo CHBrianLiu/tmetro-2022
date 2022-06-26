@@ -2,11 +2,7 @@
     position: fixed;
     width: 100%;
     top: 50px;
+    right: 0;
     bottom: 90px;
     overflow: scroll;
-}
-
-.home {
-    width: 31px;
-    height: 28px;
 }
