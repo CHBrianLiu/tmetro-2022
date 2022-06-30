@@ -1,4 +1,5 @@
 import styles from "../styles/Home.module.css";
+import Link from "next/link";
 
 const Ads = () => {
   return <div className={styles.ads}>Ads reel</div>;
@@ -28,10 +29,12 @@ const MemberInfo = ({ name, credits, ntdEquivalent }: MemberInfoProps) => {
     );
   };
   return (
-    <div className={styles.MemberInfo}>
-      <FirstRow />
-      <SecondRow />
-    </div>
+    <Link href={"/membership"} passHref>
+      <a className={styles.MemberInfo}>
+        <FirstRow />
+        <SecondRow />
+      </a>
+    </Link>
   );
 };
 
