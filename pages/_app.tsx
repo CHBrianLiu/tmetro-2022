@@ -4,6 +4,36 @@ import { AppProps } from "next/app";
 import Banner from "../components/Banner";
 import styles from "../styles/Layout.module.css";
 import TabBar from "../components/TabBar";
+import Home from "../assets/tabbar.home.svg";
+import Restaurant from "../assets/tabbar.restaurant.svg";
+import Shopping from "../assets/tabbar.shopping.svg";
+import Service from "../assets/tabbar.service.svg";
+import Membership from "../assets/tabbar.membership.svg";
+
+const tabBarItems = [
+  {
+    icon: Home,
+    text: "Home",
+    link: "/",
+  },
+  {
+    icon: Restaurant,
+    text: "線上商城",
+  },
+  {
+    icon: Shopping,
+    text: "捷運路網",
+  },
+  {
+    icon: Service,
+    text: "溫馨服務",
+  },
+  {
+    icon: Membership,
+    text: "會員中心",
+    link: "/membership",
+  },
+];
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -39,7 +69,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <div className={styles.page}>
         <Component {...pageProps} />
       </div>
-      <TabBar />
+      <TabBar items={tabBarItems} />
     </>
   );
 }

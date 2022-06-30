@@ -2,11 +2,6 @@ import styles from "../styles/TabBar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Home from "../assets/tabbar.home.svg";
-import Restaurant from "../assets/tabbar.restaurant.svg";
-import Shopping from "../assets/tabbar.shopping.svg";
-import Service from "../assets/tabbar.service.svg";
-import Membership from "../assets/tabbar.membership.svg";
 
 type FakeButtonProps = {
   imageSrc: string;
@@ -44,31 +39,33 @@ const MenuButton = ({ imageSrc, text, link, selected }: MenuButtonProps) => {
   );
 };
 
-const TabBar = () => {
+interface ITabBarItem {
+  icon: string;
+  text: string;
+  link?: string;
+}
+
+interface ITabBarProps {
+  items: ITabBarItem[];
+}
+
+const TabBar = ({ items }: ITabBarProps) => {
   const router = useRouter();
-  return (
-    <div className={styles.TabBar}>
-      {/* TODO: values in `link` and `selected` props are duplicated.
-                find a better way to construct them. */}
-      <MenuButton
-        imageSrc={Home}
-        text={"Home"}
-        link={"/"}
-        selected={router.pathname === "/"}
-      />
-      <FakeButton imageSrc={Restaurant} text={"捷客鮮"} />
-      <FakeButton imageSrc={Shopping} text={"線上商城"} />
-      <FakeButton imageSrc={Service} text={"溫馨服務"} />
-      {/* TODO: values in `link` and `selected` props are duplicated.
-                find a better way to construct them. */}
-      <MenuButton
-        imageSrc={Membership}
-        text={"會員中心"}
-        link={"/membership"}
-        selected={router.pathname === "/membership"}
-      />
-    </div>
-  );
+  const buttons = items.map((item) => {
+    if (item.link !== undefined) {
+      return (
+        <MenuButton
+          imageSrc={item.icon}
+          text={item.text}
+          link={item.link}
+          selected={router.pathname === item.link}
+        />
+      );
+    } else {
+      return <FakeButton imageSrc={item.icon} text={item.text} />;
+    }
+  });
+  return <div className={styles.TabBar}>{buttons}</div>;
 };
 
 export default TabBar;
