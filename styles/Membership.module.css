@@ -1,0 +1,50 @@
+.container {
+    min-height: 100%;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /*overflow-x: scroll;*/
+    gap: 20px;
+    background: #F1F1F1;
+}
+
+.ProfilePicSectionExpanded {
+    transition: 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 17px;
+    margin: 19px;
+}
+
+.ProfilePic {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background: #D9D9D9;
+}
+
+.TabBarSection {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 24px;
+    margin-left: 17px;
+    margin-right: 17px;
+    overflow: scroll;
+}
+
+.TabBarItem {
+    flex-shrink: 0;
+    padding: 10px 4px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.tabBarItemUnselected {
+    color: #B9B9B9;
+}
