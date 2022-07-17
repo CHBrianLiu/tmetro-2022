@@ -1,12 +1,9 @@
 .container {
     min-height: 100%;
-    padding: 20px 12px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    /*overflow-x: scroll;*/
-    gap: 20px;
     background: #F1F1F1;
 }
 
@@ -17,7 +14,10 @@
     align-items: center;
     justify-content: space-between;
     gap: 17px;
-    margin: 19px;
+    background: #F8F8F8;
+    width: 100%;
+    padding-top: 19px;
+    padding-bottom: 21px;
 }
 
 .ProfilePic {
@@ -32,9 +32,12 @@
     justify-content: flex-start;
     width: 100%;
     gap: 24px;
-    margin-left: 17px;
-    margin-right: 17px;
+    padding-left: 17px;
+    padding-right: 17px;
     overflow: scroll;
+    position: sticky;
+    top: 0;
+    background: #F8F8F8;
 }
 
 .TabBarItem {

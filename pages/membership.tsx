@@ -80,6 +80,7 @@ const Membership = () => {
       <ProfilePreview />
       <TabBar items={tabBarItems} current={currentTab} />
       <TabContent />
+      <div style={{ height: "1000px", background: "#D9D9D9" }}></div>
     </div>
   );
 };
