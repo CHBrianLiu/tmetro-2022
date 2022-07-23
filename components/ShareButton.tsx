@@ -22,7 +22,7 @@ const ShareButton = ({ data }: ShareButtonProps) => {
   return (
     <div onClick={shareButtonClickHandler} className={styles.Button}>
       <Image src={ShareIcon} alt={"share icon"} />
-      Share
+      分享我的徽章
     </div>
   );
 };

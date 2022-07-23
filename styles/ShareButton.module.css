@@ -7,6 +7,9 @@
     gap: 6px;
     width: 280px;
     height: 37px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
     border-radius: 35px;
     background: linear-gradient(0deg, rgba(244, 244, 244, 0.88), rgba(244, 244, 244, 0.88)), #404040;
     background-blend-mode: normal, color-dodge;
