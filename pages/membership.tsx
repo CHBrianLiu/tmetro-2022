@@ -68,7 +68,7 @@ const Membership = () => {
       ? tabQueryParam
       : DEFAULT_TAB;
   // @ts-ignore
-  const [tabName, TabContent] = tabs.get(currentTab);
+  const [_, TabContent] = tabs.get(currentTab);
   const tabBarItems = Array.from(tabs).map(([tabName, [displayName]]) => {
     return {
       displayName: displayName,
@@ -80,7 +80,6 @@ const Membership = () => {
       <ProfilePreview />
       <TabBar items={tabBarItems} current={currentTab} />
       <TabContent />
-      <div style={{ height: "1000px", background: "#D9D9D9" }}></div>
     </div>
   );
 };
