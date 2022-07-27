@@ -13,7 +13,6 @@
 .ads {
     height: 135px;
     width: 100%;
-    background: #D6D6D6;
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -80,8 +79,6 @@
 .ShortcutIcon {
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    background: #D9D9D9;
 }
 
 .OnlineMallSection {
