@@ -15,7 +15,11 @@ import SpacesPic3 from "../assets/IndexSpacesPic/spaces.pic3.svg";
 import Image from "next/image";
 
 const Ads = () => {
-  return <div className={styles.ads}><Image src = {AdsImage}></Image></div>;
+  return (
+    <div className={styles.ads}>
+      <Image src={AdsImage}></Image>
+    </div>
+  );
 };
 
 type MemberInfoProps = {
@@ -47,7 +51,7 @@ const MemberInfo = ({ name, credits, ntdEquivalent }: MemberInfoProps) => {
   //     <SecondRow />
   //   </div>
   // );
-  return (<Image src = {FakePoint} className = {styles.MemberInfo}></Image>)
+  return <Image src={FakePoint} className={styles.MemberInfo}></Image>;
 };
 
 type ShortcutItemProps = {
@@ -82,7 +86,7 @@ type OnlineMallProps = {
   image3: string;
 };
 
-const OnlineMall = ({image1, image2, image3}: OnlineMallProps) => {
+const OnlineMall = ({ image1, image2, image3 }: OnlineMallProps) => {
   return (
     <div className={styles.OnlineMallSection}>
       <div className={styles.OnlineMallTitle}>
@@ -98,7 +102,7 @@ const OnlineMall = ({image1, image2, image3}: OnlineMallProps) => {
   );
 };
 
-const Spaces = ({image1, image2, image3}: OnlineMallProps) => {
+const Spaces = ({ image1, image2, image3 }: OnlineMallProps) => {
   return (
     <div className={styles.OnlineMallSection}>
       <div className={styles.OnlineMallTitle}>
@@ -120,7 +124,11 @@ export default function Home() {
       <Ads />
       <MemberInfo name={"陳小名"} credits={328} ntdEquivalent={45} />
       <Shortcuts />
-      <OnlineMall image1={OnlineMallPic1} image2={OnlineMallPic2} image3={OnlineMallPic3}/>
+      <OnlineMall
+        image1={OnlineMallPic1}
+        image2={OnlineMallPic2}
+        image3={OnlineMallPic3}
+      />
       <Spaces image1={SpacesPic1} image2={SpacesPic2} image3={SpacesPic3} />
     </div>
   );
