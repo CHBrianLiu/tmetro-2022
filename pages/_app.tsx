@@ -18,21 +18,9 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <meta name="description" content="Description" />
         <meta name="keywords" content="Keywords" />
         <title>Taipei Metro App - Demo</title>
-
+        <link rel="icon" href="/favicon.ico" type="image/svg+xml" />
         <link rel="manifest" href="/manifest.json" />
-        <link
-          href="/icons/favicon-16x16.png"
-          rel="icon"
-          type="image/png"
-          sizes="16x16"
-        />
-        <link
-          href="/icons/favicon-32x32.png"
-          rel="icon"
-          type="image/png"
-          sizes="32x32"
-        />
-        <link rel="apple-touch-icon" href="/apple-icon.png"></link>
+        <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
         <meta name="theme-color" content="#f7f7f8" />
       </Head>
       <div style={{ zIndex: 1, position: "fixed" }}>
