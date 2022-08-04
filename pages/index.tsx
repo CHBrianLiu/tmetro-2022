@@ -1,18 +1,19 @@
 import styles from "../styles/Home.module.css";
-import AdsImage from "../public/assets/index.ads.svg";
-import FakePoint from "../public/assets/index.fakepoint.svg";
+// import AdsImage from "../public/assets/index.ads.svg";
+import AdsImage from "../public/assets/index/ads.png";
+import FakePoint from "../public/assets/index/fake-point-info.png";
 import IndexMidTab1 from "../public/assets/IndexMidTab/midtab.myticket.svg";
 import IndexMidTab2 from "../public/assets/IndexMidTab/midtab.arrivedtime.svg";
 import IndexMidTab3 from "../public/assets/IndexMidTab/midtab.roadinternet.svg";
 import IndexMidTab4 from "../public/assets/IndexMidTab/midtab.coupon.svg";
 import IndexMidTab5 from "../public/assets/IndexMidTab/midtab.achievement.svg";
-import OnlineMallPic1 from "../public/assets/IndexOnlineMallPic/onlinemall.pic1.svg";
-import OnlineMallPic2 from "../public/assets/IndexOnlineMallPic/onlinemall.pic2.svg";
-import OnlineMallPic3 from "../public/assets/IndexOnlineMallPic/onlinemall.pic3.svg";
-import SpacesPic1 from "../public/assets/IndexSpacesPic/spaces.pic1.svg";
-import SpacesPic2 from "../public/assets/IndexSpacesPic/spaces.pic2.svg";
-import SpacesPic3 from "../public/assets/IndexSpacesPic/spaces.pic3.svg";
-import Image from "next/image";
+import OnlineMallPic1 from "../public/assets/index/onlinemall/pic1.png";
+import OnlineMallPic2 from "../public/assets/index/onlinemall/pic2.png";
+import OnlineMallPic3 from "../public/assets/index/onlinemall/pic3.png";
+import SpacesPic1 from "../public/assets/index/spaces/pic1.png";
+import SpacesPic2 from "../public/assets/index/spaces/pic2.png";
+import SpacesPic3 from "../public/assets/index/spaces/pic3.png";
+import Image, { StaticImageData } from "next/image";
 
 const Ads = () => {
   return (
@@ -22,36 +23,8 @@ const Ads = () => {
   );
 };
 
-type MemberInfoProps = {
-  name: string;
-  credits: number;
-  ntdEquivalent: number;
-};
-
-const MemberInfo = ({ name, credits, ntdEquivalent }: MemberInfoProps) => {
-  // const FirstRow = () => {
-  //   return (
-  //     <div className={styles.MemberInfoFirstColumn}>
-  //       <div>{name}</div>
-  //       <div>{credits} 點</div>
-  //     </div>
-  //   );
-  // };
-  // const SecondRow = () => {
-  //   return (
-  //     <div className={styles.MemberInfoSecondColumn}>
-  //       <div>捷客點</div>
-  //       <div>可退換 NT ${ntdEquivalent}</div>
-  //     </div>
-  //   );
-  // };
-  // return (
-  //   <div className={styles.MemberInfo}>
-  //     <FirstRow />
-  //     <SecondRow />
-  //   </div>
-  // );
-  return <Image src={FakePoint} className={styles.MemberInfo}></Image>;
+const MemberInfo = () => {
+  return <Image src={FakePoint} className={styles.MemberInfo} />;
 };
 
 type ShortcutItemProps = {
@@ -62,7 +35,7 @@ type ShortcutItemProps = {
 const ShortcutItem = ({ text, image }: ShortcutItemProps) => {
   return (
     <div className={styles.ShortcutItem}>
-      <Image src={image} className={styles.ShortcutIcon}></Image>
+      <Image src={image} className={styles.ShortcutIcon} />
       {text}
     </div>
   );
@@ -80,13 +53,7 @@ const Shortcuts = () => {
   );
 };
 
-type OnlineMallProps = {
-  image1: string;
-  image2: string;
-  image3: string;
-};
-
-const OnlineMall = ({ image1, image2, image3 }: OnlineMallProps) => {
+const OnlineMall = ({ images }: { images: StaticImageData[] }) => {
   return (
     <div className={styles.OnlineMallSection}>
       <div className={styles.OnlineMallTitle}>
@@ -94,15 +61,15 @@ const OnlineMall = ({ image1, image2, image3 }: OnlineMallProps) => {
         <p>查看更多</p>
       </div>
       <div className={styles.OnlineMallTilesSection}>
-        <Image src={image1} className={styles.OnlineMallTile}></Image>
-        <Image src={image2} className={styles.OnlineMallTile}></Image>
-        <Image src={image3} className={styles.OnlineMallTile}></Image>
+        {images.map((image) => (
+          <Image src={image} className={styles.OnlineMallTile} />
+        ))}
       </div>
     </div>
   );
 };
 
-const Spaces = ({ image1, image2, image3 }: OnlineMallProps) => {
+const Spaces = ({ images }: { images: StaticImageData[] }) => {
   return (
     <div className={styles.OnlineMallSection}>
       <div className={styles.OnlineMallTitle}>
@@ -110,9 +77,9 @@ const Spaces = ({ image1, image2, image3 }: OnlineMallProps) => {
         <p>查看更多</p>
       </div>
       <div className={styles.OnlineMallTilesSection}>
-        <Image src={image1} className={styles.OnlineMallTile}></Image>
-        <Image src={image2} className={styles.OnlineMallTile}></Image>
-        <Image src={image3} className={styles.OnlineMallTile}></Image>
+        {images.map((image) => (
+          <Image src={image} className={styles.OnlineMallTile} />
+        ))}
       </div>
     </div>
   );
@@ -122,14 +89,10 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Ads />
-      <MemberInfo name={"陳小名"} credits={328} ntdEquivalent={45} />
+      <MemberInfo />
       <Shortcuts />
-      <OnlineMall
-        image1={OnlineMallPic1}
-        image2={OnlineMallPic2}
-        image3={OnlineMallPic3}
-      />
-      <Spaces image1={SpacesPic1} image2={SpacesPic2} image3={SpacesPic3} />
+      <OnlineMall images={[OnlineMallPic1, OnlineMallPic2, OnlineMallPic3]} />
+      <Spaces images={[SpacesPic1, SpacesPic2, SpacesPic3]} />
     </div>
   );
 }
