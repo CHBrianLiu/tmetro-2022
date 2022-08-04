@@ -1,18 +1,18 @@
 import styles from "../styles/Home.module.css";
 // import AdsImage from "../public/assets/index.ads.svg";
-import AdsImage from "../public/assets/index/ads.png";
-import FakePoint from "../public/assets/index/fake-point-info.png";
+import AdsImage from "../public/assets/index/ads.webp";
+import FakePoint from "../public/assets/index/fake-point-info.webp";
 import IndexMidTab1 from "../public/assets/IndexMidTab/midtab.myticket.svg";
 import IndexMidTab2 from "../public/assets/IndexMidTab/midtab.arrivedtime.svg";
 import IndexMidTab3 from "../public/assets/IndexMidTab/midtab.roadinternet.svg";
 import IndexMidTab4 from "../public/assets/IndexMidTab/midtab.coupon.svg";
 import IndexMidTab5 from "../public/assets/IndexMidTab/midtab.achievement.svg";
-import OnlineMallPic1 from "../public/assets/index/onlinemall/pic1.png";
-import OnlineMallPic2 from "../public/assets/index/onlinemall/pic2.png";
-import OnlineMallPic3 from "../public/assets/index/onlinemall/pic3.png";
-import SpacesPic1 from "../public/assets/index/spaces/pic1.png";
-import SpacesPic2 from "../public/assets/index/spaces/pic2.png";
-import SpacesPic3 from "../public/assets/index/spaces/pic3.png";
+import OnlineMallPic1 from "../public/assets/index/onlinemall/pic1.webp";
+import OnlineMallPic2 from "../public/assets/index/onlinemall/pic2.webp";
+import OnlineMallPic3 from "../public/assets/index/onlinemall/pic3.webp";
+import SpacesPic1 from "../public/assets/index/spaces/pic1.webp";
+import SpacesPic2 from "../public/assets/index/spaces/pic2.webp";
+import SpacesPic3 from "../public/assets/index/spaces/pic3.webp";
 import Image, { StaticImageData } from "next/image";
 
 const Ads = () => {
