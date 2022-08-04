@@ -61,8 +61,12 @@ const OnlineMall = ({ images }: { images: StaticImageData[] }) => {
         <p>查看更多</p>
       </div>
       <div className={styles.OnlineMallTilesSection}>
-        {images.map((image) => (
-          <Image src={image} className={styles.OnlineMallTile} />
+        {images.map((image, index) => (
+          <Image
+            src={image}
+            className={styles.OnlineMallTile}
+            key={`${index}`}
+          />
         ))}
       </div>
     </div>
@@ -77,8 +81,12 @@ const Spaces = ({ images }: { images: StaticImageData[] }) => {
         <p>查看更多</p>
       </div>
       <div className={styles.OnlineMallTilesSection}>
-        {images.map((image) => (
-          <Image src={image} className={styles.OnlineMallTile} />
+        {images.map((image, index) => (
+          <Image
+            src={image}
+            className={styles.OnlineMallTile}
+            key={`${index}`}
+          />
         ))}
       </div>
     </div>
