@@ -2,11 +2,11 @@ import styles from "../styles/TabBar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Home from "../assets/tabbar.home.svg";
-import Restaurant from "../assets/tabbar.restaurant.svg";
-import Shopping from "../assets/tabbar.shopping.svg";
-import Service from "../assets/tabbar.service.svg";
-import Membership from "../assets/tabbar.membership.svg";
+import Home from "../public/assets/tabbar.home.svg";
+import Restaurant from "../public/assets/tabbar.restaurant.svg";
+import Shopping from "../public/assets/tabbar.shopping.svg";
+import Service from "../public/assets/tabbar.service.svg";
+import Membership from "../public/assets/tabbar.membership.svg";
 
 type FakeButtonProps = {
   imageSrc: string;

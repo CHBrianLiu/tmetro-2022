@@ -1,10 +1,10 @@
 import Image from "next/image";
 import styles from "./Coupons.module.css";
-import CouponsFakePic1 from "../../assets/Membership/Coupons/CouponsFakePic1.svg";
-import CouponsFakePic2 from "../../assets/Membership/Coupons/CouponsFakePic2.svg";
-import CouponsFakePic3 from "../../assets/Membership/Coupons/CouponsFakePic3.svg";
-import CouponsFakePic4 from "../../assets/Membership/Coupons/CouponsFakePic4.svg";
-import CouponsFakeTab from "../../assets/Membership/Coupons/CouponsFakeTab.svg";
+import CouponsFakePic1 from "../../public/assets/Membership/Coupons/fake-coupon1.webp";
+import CouponsFakePic2 from "../../public/assets/Membership/Coupons/fake-coupon2.webp";
+import CouponsFakePic3 from "../../public/assets/Membership/Coupons/fake-coupon3.webp";
+import CouponsFakePic4 from "../../public/assets/Membership/Coupons/fake-coupon4.webp";
+import CouponsFakeTab from "../../public/assets/Membership/Coupons/CouponsFakeTab.svg";
 
 export const Coupons = () => {
   return (

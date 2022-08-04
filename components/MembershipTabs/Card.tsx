@@ -1,15 +1,18 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
-import OpenCameraIcon from "../../assets/Membership/Card/OpenCameraIcon.svg";
-import ShowCodeIcon from "../../assets/Membership/Card/ShowCodeIcon.svg";
-import FakeCode from "../../assets/Membership/Card/FakeCode.svg";
-import FakeToggle from "../../assets/Membership/Card/FakeToggle.svg";
+import OpenCameraIcon from "../../public/assets/Membership/Card/OpenCameraIcon.svg";
+import ShowCodeIcon from "../../public/assets/Membership/Card/ShowCodeIcon.svg";
+import FakeCode from "../../public/assets/Membership/Card/FakeCode.svg";
+import FakeToggle from "../../public/assets/Membership/Card/FakeToggle.svg";
+import FakeSilverCard from "../../public/assets/Membership/Card/silver-card.webp";
 
 export const Card = () => {
   return (
     <div className={styles.TabContainer}>
       <div className={styles.MembershipInfo}>
-        <div className={styles.CardPreview}>捷運金卡會員</div>
+        <div className={styles.CardPreview}>
+          <Image src={FakeSilverCard} />
+        </div>
         <div className={styles.MembershipInfoDescription}>
           <div>金卡會員</div>
           <div>有效期限：2021/4/17-2022/5/30</div>

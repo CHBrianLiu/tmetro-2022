@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
-import ShareButton from "../components/ShareButton";
 import {
   Card,
   Coupons,
@@ -8,6 +7,8 @@ import {
   Points,
   Purchases,
 } from "../components/MembershipTabs";
+import Image from "next/image";
+import ProfilePic from "../public/assets/Membership/profile-pic.webp";
 import styles from "../styles/Membership.module.css";
 
 const DEFAULT_TAB = "card";
@@ -22,14 +23,15 @@ const tabs: Map<string, [string, () => JSX.Element]> = new Map([
 ]);
 
 const ProfilePreview = () => {
-  const ProfilePic = () => <div className={styles.ProfilePic} />;
   const Name = () => (
-    <span style={{ fontSize: "14px", fontWeight: 600 }}>陳小明</span>
+    <span style={{ fontSize: "14px", fontWeight: 600 }}>布萊恩</span>
   );
 
   return (
     <div className={styles.ProfilePicSectionExpanded}>
-      <ProfilePic />
+      <div className={styles.ProfilePic}>
+        <Image src={ProfilePic} />
+      </div>
       <Name />
     </div>
   );

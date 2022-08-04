@@ -18,19 +18,8 @@
 
 .CardPreview {
     width: 366px;
-    height: 169px;
-    background: #D6D6D6;
     border-radius: 6px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 19px;
-    letter-spacing: 8px;
-    color: #FFFFFF;
+    overflow: hidden;
 }
 
 .MembershipInfoDescription {
