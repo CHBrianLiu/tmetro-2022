@@ -1,12 +1,11 @@
 import styles from "../styles/Home.module.css";
-// import AdsImage from "../public/assets/index.ads.svg";
 import AdsImage from "../public/assets/index/ads.webp";
 import FakePoint from "../public/assets/index/fake-point-info.webp";
-import IndexMidTab1 from "../public/assets/IndexMidTab/midtab.myticket.svg";
-import IndexMidTab2 from "../public/assets/IndexMidTab/midtab.arrivedtime.svg";
-import IndexMidTab3 from "../public/assets/IndexMidTab/midtab.roadinternet.svg";
-import IndexMidTab4 from "../public/assets/IndexMidTab/midtab.coupon.svg";
-import IndexMidTab5 from "../public/assets/IndexMidTab/midtab.achievement.svg";
+import IndexMidTab1 from "../public/assets/index/shortcuts/myticket.svg";
+import IndexMidTab2 from "../public/assets/index/shortcuts/arrivedtime.svg";
+import IndexMidTab3 from "../public/assets/index/shortcuts/roadinternet.svg";
+import IndexMidTab4 from "../public/assets/index/shortcuts/coupon.svg";
+import IndexMidTab5 from "../public/assets/index/shortcuts/achievement.svg";
 import OnlineMallPic1 from "../public/assets/index/onlinemall/pic1.webp";
 import OnlineMallPic2 from "../public/assets/index/onlinemall/pic2.webp";
 import OnlineMallPic3 from "../public/assets/index/onlinemall/pic3.webp";
