@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./Points.module.css";
-import FakePointStatus from "../../public/assets/Membership/Points/FakePointStatus.svg";
-import FakeDateSelector from "../../public/assets/Membership/Points/FakeDateSelector.svg";
-import FakePointRecord051901 from "../../public/assets/Membership/Points/FakePointRecord051901.svg";
-import FakePointRecord051902 from "../../public/assets/Membership/Points/FakePointRecord051902.svg";
-import FakePointRecord052001 from "../../public/assets/Membership/Points/FakePointRecord052001.svg";
-import FakePointRecord052002 from "../../public/assets/Membership/Points/FakePointRecord052002.svg";
+import FakePointStatus from "../../public/assets/Membership/Points/fake-point-status.webp";
+import FakeDateSelector from "../../public/assets/Membership/Points/fake-date-selector.webp";
+import FakePointRecord051901 from "../../public/assets/Membership/Points/fake-record1.webp";
+import FakePointRecord051902 from "../../public/assets/Membership/Points/fake-record2.webp";
+import FakePointRecord052001 from "../../public/assets/Membership/Points/fake-record3.webp";
+import FakePointRecord052002 from "../../public/assets/Membership/Points/fake-record4.webp";
 
 export const Points = () => {
   return (
