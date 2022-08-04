@@ -1,9 +1,9 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
-import OpenCameraIcon from "../../assets/Membership/Card/OpenCameraIcon.svg";
-import ShowCodeIcon from "../../assets/Membership/Card/ShowCodeIcon.svg";
-import FakeCode from "../../assets/Membership/Card/FakeCode.svg";
-import FakeToggle from "../../assets/Membership/Card/FakeToggle.svg";
+import OpenCameraIcon from "../../public/assets/Membership/Card/OpenCameraIcon.svg";
+import ShowCodeIcon from "../../public/assets/Membership/Card/ShowCodeIcon.svg";
+import FakeCode from "../../public/assets/Membership/Card/FakeCode.svg";
+import FakeToggle from "../../public/assets/Membership/Card/FakeToggle.svg";
 
 export const Card = () => {
   return (

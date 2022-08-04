@@ -1,7 +1,7 @@
 import styles from "../styles/Banner.module.css";
-import Logo from "../assets/banner.metro-logo.svg";
-import Menu from "../assets/banner.hamburger-menu.svg";
-import Notification from "../assets/banner.notification-bell.svg";
+import Logo from "../public/assets/banner.metro-logo.svg";
+import Menu from "../public/assets/banner.hamburger-menu.svg";
+import Notification from "../public/assets/banner.notification-bell.svg";
 import Image from "next/image";
 import { useState } from "react";
 import Slide from "./Notification/Slide";

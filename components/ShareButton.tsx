@@ -1,5 +1,5 @@
 import styles from "../styles/ShareButton.module.css";
-import ShareIcon from "../assets/share-icon.svg";
+import ShareIcon from "../public/assets/share-icon.svg";
 import Image from "next/image";
 
 interface ShareButtonProps {
