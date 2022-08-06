@@ -7,11 +7,11 @@
 ## Tech stack
 
 * Next.JS
-  * TypeScript
-  * React
-  * Progressive Web App (PWA)
+    * TypeScript
+    * React
+    * Progressive Web App (PWA)
 * Hosting
-  * Azure Static Web Apps
+    * Azure Static Web Apps
 
 ## Development
 
@@ -42,6 +42,14 @@ npm run format
 ```shell
 npm run lint
 npm run check-format
+```
+
+### Image processing
+
+Use `webp` format to reduce size of images. Use the following command to generate webp files from png files.
+
+```shell
+`for file in **/*.png; do cwebp -q 50 "$file" -o "${file%.*}.webp"; done;`
 ```
 
 ## Deployment
