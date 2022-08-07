@@ -59,3 +59,33 @@ Use `webp` format to reduce size of images. Use the following command to generat
 ```shell
 npm run build
 ```
+
+## Accelerate development speed
+
+### Install PWA app from dev server
+
+It's time wasting if we can only verify changes after deployment, even if deployment is done by the Continuous
+Deployment system. By establishing a secure connection between our laptop and mobile phone, we can install the app under
+development.
+
+*Example environment*
+
+* Laptop: 192.168.31.100
+* Mobile: 192.168.31.XXX
+
+1. Run the containers on your laptop. It will start 1) Nginx and 2) Next.JS dev server containers.
+
+    ```shell
+    docker compose up -d
+    ```
+
+    ```mermaid
+    flowchart LR
+        mobile-->|HTTPS|nginx
+        nginx-->|HTTP|NextDevServer
+    ```
+2. From your mobile phone's default browser, go to `https://<LAPTOP_IP>`. For the example above,
+   it's `https://192.168.31.100`.
+3. Install the PWA app.
+4. Because the underlying dev server supports hot reloading, you can update codes, then observe the changes from your
+   phone immediately.
