@@ -1,0 +1,14 @@
+.main {
+    position: fixed;
+    width: 100%;
+    top: 50px;
+    right: 0;
+    bottom: 70px;
+    overflow: scroll;
+    z-index: 0;
+}
+
+.banner {
+    z-index: 1;
+    position: fixed;
+}

@@ -13,6 +13,7 @@ import SpacesPic1 from "../public/assets/index/spaces/pic1.webp";
 import SpacesPic2 from "../public/assets/index/spaces/pic2.webp";
 import SpacesPic3 from "../public/assets/index/spaces/pic3.webp";
 import Image, { StaticImageData } from "next/image";
+import TopPageFrame from "../components/TopPageFrame/topPageFrame";
 
 const Ads = () => {
   return (
@@ -94,12 +95,14 @@ const Spaces = ({ images }: { images: StaticImageData[] }) => {
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Ads />
-      <MemberInfo />
-      <Shortcuts />
-      <OnlineMall images={[OnlineMallPic1, OnlineMallPic2, OnlineMallPic3]} />
-      <Spaces images={[SpacesPic1, SpacesPic2, SpacesPic3]} />
-    </div>
+    <TopPageFrame>
+      <div className={styles.container}>
+        <Ads />
+        <MemberInfo />
+        <Shortcuts />
+        <OnlineMall images={[OnlineMallPic1, OnlineMallPic2, OnlineMallPic3]} />
+        <Spaces images={[SpacesPic1, SpacesPic2, SpacesPic3]} />
+      </div>
+    </TopPageFrame>
   );
 }

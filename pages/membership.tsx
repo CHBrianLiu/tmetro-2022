@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import ProfilePic from "../public/assets/Membership/profile-pic.webp";
 import styles from "../styles/Membership.module.css";
+import TopPageFrame from "../components/TopPageFrame/topPageFrame";
 
 const DEFAULT_TAB = "card";
 
@@ -78,11 +79,13 @@ const Membership = () => {
     };
   });
   return (
-    <div className={styles.container}>
-      <ProfilePreview />
-      <TabBar items={tabBarItems} current={currentTab} />
-      <TabContent />
-    </div>
+    <TopPageFrame>
+      <div className={styles.container}>
+        <ProfilePreview />
+        <TabBar items={tabBarItems} current={currentTab} />
+        <TabContent />
+      </div>
+    </TopPageFrame>
   );
 };
 
