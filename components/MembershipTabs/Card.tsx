@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
+import Link from "next/link";
 import OpenCameraIcon from "../../public/assets/Membership/Card/OpenCameraIcon.svg";
 import ShowCodeIcon from "../../public/assets/Membership/Card/ShowCodeIcon.svg";
 import FakeCode from "../../public/assets/Membership/Card/FakeCode.svg";
 import FakeToggle from "../../public/assets/Membership/Card/FakeToggle.svg";
 import FakeSilverCard from "../../public/assets/Membership/Card/silver-card.webp";
+import FakeMemberInfo from "../../public/assets/Membership/Card/MemberInfoLink.svg";
 
 export const Card = () => {
   return (
@@ -14,8 +16,11 @@ export const Card = () => {
           <Image src={FakeSilverCard} />
         </div>
         <div className={styles.MembershipInfoDescription}>
-          <div>金卡會員</div>
-          <div>有效期限：2021/4/17-2022/5/30</div>
+          <Link href={"/card/memberinfo"}>
+          <a>
+            <Image src = {FakeMemberInfo}></Image>
+          </a>
+          </Link>
         </div>
       </div>
       <div className={styles.ActionIconsGroup}>
