@@ -1,0 +1,39 @@
+.BannerLayout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 50px;
+    background: #f8f8f8;
+}
+
+.BackButton {
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    color: #3179AA;
+}
+
+.Title {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    color: #000000;
+}
+
+.BannerIconsLayout {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.menu {
+    width: 18px;
+    height: 12px;
+}
+
+.notification {
+    width: 25px;
+    height: 22px;
+}

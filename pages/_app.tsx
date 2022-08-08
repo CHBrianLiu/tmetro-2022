@@ -23,15 +23,7 @@ export default function MyApp({ Component, pageProps }: AppProps) {
         <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"></link>
         <meta name="theme-color" content="#f7f7f8" />
       </Head>
-      <div style={{ zIndex: 1, position: "fixed" }}>
-        <Banner />
-      </div>
-      <div className={styles.page}>
-        <Component {...pageProps} />
-      </div>
-      <div>
-        <TabBar />
-      </div>
+      <Component {...pageProps} />
     </>
   );
 }
