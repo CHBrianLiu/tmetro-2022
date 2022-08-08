@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./Achievements.module.css";
+import Link from "next/link";
 import AchieveFacePic1 from "../../public/assets/Membership/Achievements/achievement1.webp";
 import AchieveFacePic2 from "../../public/assets/Membership/Achievements/achievement2.webp";
 import AchieveFacePic3 from "../../public/assets/Membership/Achievements/achievement3.webp";
@@ -16,7 +17,11 @@ export const Achievements = () => {
         <Image src={AchieveFacePic3} />
       </div>
       <div className={styles.LearnMoreButton}>
-        <Image src={LearnMore} />
+        <Link href={"/achievements/learnmore"}>
+          <a>
+            <Image src={LearnMore} />
+          </a>
+        </Link>
       </div>
     </div>
   );
