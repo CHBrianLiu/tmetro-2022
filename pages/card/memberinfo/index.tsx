@@ -6,18 +6,17 @@ const ColdstoneCouponIntroductionPage = () => {
     <LastPageFrame previousPageUrl={"/membership?tab=card"} title={"會員卡"}>
       <div>
         <Image
-              src={"//assets/card/memberinfo/cardmemberinfo1.webp"}
-              layout={"responsive"}
-              width={"354px"}
-              height={"764px"}
+          src={"//assets/card/memberinfo/cardmemberinfo1.webp"}
+          layout={"responsive"}
+          width={"390px"}
+          height={"184px"}
         />
         <Image
-              src={"//assets/card/memberinfo/cardmemberinfo2.webp"}
-              layout={"responsive"}
-              width={"354px"}
-              height={"764px"}
+          src={"//assets/card/memberinfo/cardmemberinfo2.webp"}
+          layout={"responsive"}
+          width={"390px"}
+          height={"623px"}
         />
-
       </div>
     </LastPageFrame>
   );
