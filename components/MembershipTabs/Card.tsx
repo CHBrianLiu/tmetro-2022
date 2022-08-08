@@ -17,9 +17,9 @@ export const Card = () => {
         </div>
         <div className={styles.MembershipInfoDescription}>
           <Link href={"/card/memberinfo"}>
-          <a>
-            <Image src = {FakeMemberInfo}></Image>
-          </a>
+            <a>
+              <Image src={FakeMemberInfo}></Image>
+            </a>
           </Link>
         </div>
       </div>
