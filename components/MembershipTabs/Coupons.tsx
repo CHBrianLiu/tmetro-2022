@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./Coupons.module.css";
 import CouponsFakePic1 from "../../public/assets/Membership/Coupons/fake-coupon1.webp";
 import CouponsFakePic2 from "../../public/assets/Membership/Coupons/fake-coupon2.webp";
@@ -13,7 +14,11 @@ export const Coupons = () => {
       <div className={styles.PointRecords}>
         <Image src={CouponsFakePic1} />
         <Image src={CouponsFakePic2} />
-        <Image src={CouponsFakePic3} />
+        <Link href={"/coupons/coldstone"}>
+          <a>
+            <Image src={CouponsFakePic3} />
+          </a>
+        </Link>
         <Image src={CouponsFakePic4} />
       </div>
     </div>
