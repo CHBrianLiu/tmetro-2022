@@ -13,7 +13,7 @@ import SpacesPic1 from "../public/assets/index/spaces/pic1.webp";
 import SpacesPic2 from "../public/assets/index/spaces/pic2.webp";
 import SpacesPic3 from "../public/assets/index/spaces/pic3.webp";
 import Image, { StaticImageData } from "next/image";
-import TopPageFrame from "../components/TopPageFrame/topPageFrame";
+import TopPageFrame from "../components/TopPageFrame";
 
 const Ads = () => {
   return (

@@ -10,7 +10,7 @@ import {
 import Image from "next/image";
 import ProfilePic from "../public/assets/Membership/profile-pic.webp";
 import styles from "../styles/Membership.module.css";
-import TopPageFrame from "../components/TopPageFrame/topPageFrame";
+import TopPageFrame from "../components/TopPageFrame";
 
 const DEFAULT_TAB = "card";
 
