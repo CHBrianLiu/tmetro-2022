@@ -5,7 +5,7 @@ interface SlideProps {
   closeModal: () => void;
 }
 
-const Slide = ({ closeModal }: SlideProps) => {
+const BadgeAcquisitionSlide = ({ closeModal }: SlideProps) => {
   return (
     <div className={styles.background}>
       <div className={styles.ContentBox}>
@@ -42,4 +42,4 @@ const Slide = ({ closeModal }: SlideProps) => {
   );
 };
 
-export default Slide;
+export default BadgeAcquisitionSlide;
