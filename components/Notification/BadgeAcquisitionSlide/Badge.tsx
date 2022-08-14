@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+const BadgeDescriptionFrame = styled.div`
+  width: 71.2%;
+`;
+
 function BadgeDescription() {
-  const BadgeDescriptionFrame = styled.div`
-    width: 71.2%;
-  `;
   return (
     <BadgeDescriptionFrame>
       <Image
@@ -18,11 +19,11 @@ function BadgeDescription() {
   );
 }
 
-function RewardDescription() {
-  const RewardDescriptionFrame = styled.div`
-    width: 38.7%;
-  `;
+const RewardDescriptionFrame = styled.div`
+  width: 38.7%;
+`;
 
+function RewardDescription() {
   return (
     <RewardDescriptionFrame>
       <Image
@@ -38,16 +39,16 @@ function RewardDescription() {
   );
 }
 
-export default function Badge() {
-  const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-    justify-content: center;
-    width: 100%;
-  `;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  justify-content: center;
+  width: 100%;
+`;
 
+export default function Badge() {
   return (
     <Container>
       <BadgeDescription />

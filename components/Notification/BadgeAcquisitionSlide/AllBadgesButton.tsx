@@ -2,10 +2,11 @@ import styled from "styled-components";
 import Image from "next/image";
 import Link from "next/link";
 
+const AllBadgesButtonFrame = styled.div`
+  width: 100%;
+`;
+
 export default function AllBadgesButton(props: { closeModal: () => void }) {
-  const AllBadgesButtonFrame = styled.div`
-    width: 100%;
-  `;
   return (
     <AllBadgesButtonFrame onClick={props.closeModal}>
       <Link href={"/membership?tab=achievements"}>

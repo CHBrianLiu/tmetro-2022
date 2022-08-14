@@ -1,10 +1,11 @@
 import styled from "styled-components";
 import Image from "next/image";
 
+const ShareButtonFrame = styled.div`
+  width: 100%;
+`;
+
 export default function ShareButton() {
-  const ShareButtonFrame = styled.div`
-    width: 100%;
-  `;
   return (
     <ShareButtonFrame>
       <Image
