@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import SlideBackgroundImage from "./SlideBackgroundImage";
 import DragIndicator from "./DragIndicator";
 import Badge from "./Badge";
@@ -9,6 +9,15 @@ import CloseButton from "./CloseButton";
 interface SlideProps {
   closeModal: () => void;
 }
+
+const slideIn = keyframes`
+  from {
+    bottom: -90vh;
+  }
+  to {
+    bottom: 0;
+  }
+`;
 
 const ShallowBackground = styled.div`
   position: fixed;
@@ -33,7 +42,7 @@ const SlideContainer = styled.div`
   width: 100vw;
   background: #ffffff;
   border-radius: 10px 10px 0 0;
-  animation-name: SlideIn;
+  animation-name: ${slideIn};
   animation-duration: 0.5s;
   gap: 45px;
 `;
