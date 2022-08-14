@@ -4,7 +4,7 @@ import Menu from "../public/assets/banner.hamburger-menu.svg";
 import Notification from "../public/assets/banner.notification-bell.svg";
 import Image from "next/image";
 import { useState } from "react";
-import Slide from "./Notification/Slide";
+import BadgeAcquisitionSlide from "./Notification/BadgeAcquisitionSlide";
 
 const Banner = () => {
   const [isModalVisible, setModalVisibility] = useState(false);
@@ -32,7 +32,7 @@ const Banner = () => {
       </div>
       {isModalVisible ? (
         <div style={{ zIndex: 1 }}>
-          <Slide closeModal={closeModal} />
+          <BadgeAcquisitionSlide closeModal={closeModal} />
         </div>
       ) : null}
     </div>
