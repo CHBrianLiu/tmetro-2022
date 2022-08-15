@@ -1,4 +1,5 @@
-import styled, { keyframes } from "styled-components";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
 import SlideBackgroundImage from "./SlideBackgroundImage";
 import DragIndicator from "./DragIndicator";
 import Badge from "./Badge";
@@ -9,15 +10,6 @@ import CloseButton from "./CloseButton";
 interface SlideProps {
   closeModal: () => void;
 }
-
-const slideIn = keyframes`
-  from {
-    bottom: -90vh;
-  }
-  to {
-    bottom: 0;
-  }
-`;
 
 const ShallowBackground = styled.div`
   position: fixed;
@@ -36,14 +28,14 @@ const SlideContainer = styled.div`
   justify-content: center;
   align-items: center;
   position: fixed;
-  bottom: 0;
+  bottom: ${(props: { expanded: boolean }) => (props.expanded ? "0" : "-90vh")};
   left: 0;
   height: 90vh;
   width: 100vw;
   background: #ffffff;
   border-radius: 10px 10px 0 0;
-  animation-name: ${slideIn};
-  animation-duration: 0.5s;
+  transition: bottom;
+  transition-duration: 0.5s;
   gap: 45px;
 `;
 
@@ -56,17 +48,31 @@ const ActionItemsGroup = styled.div`
   align-items: center;
 `;
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 const BadgeAcquisitionSlide = ({ closeModal }: SlideProps) => {
+  const [isExpanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    setExpanded(true);
+  }, []);
+
+  const closeModalWithAnimation = async () => {
+    setExpanded(false);
+    await sleep(500);
+    closeModal();
+  };
+
   return (
     <ShallowBackground>
-      <SlideContainer>
+      <SlideContainer expanded={isExpanded}>
         <SlideBackgroundImage />
         <DragIndicator />
         <Badge />
-        <CloseButton onClick={closeModal} />
+        <CloseButton onClick={closeModalWithAnimation} />
         <ActionItemsGroup>
           <ShareButton />
-          <AllBadgesButton closeModal={closeModal} />
+          <AllBadgesButton closeModal={closeModalWithAnimation} />
         </ActionItemsGroup>
       </SlideContainer>
     </ShallowBackground>
