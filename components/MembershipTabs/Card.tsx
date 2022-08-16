@@ -22,7 +22,7 @@ export const Card = () => {
               <Image src={FakeMemberInfo}></Image>
             </a>
           </Link>
-          <Image src={FakeLimitedCode}></Image>
+          <Image src={FakeLimitedCode} />
         </div>
       </div>
       <div className={styles.ActionIconsGroup}>
