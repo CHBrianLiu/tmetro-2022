@@ -1,9 +1,6 @@
 import Head from "next/head";
 import "../styles/globals.css";
 import { AppProps } from "next/app";
-import Banner from "../components/Banner";
-import styles from "../styles/Layout.module.css";
-import TabBar from "../components/TabBar";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
