@@ -4,7 +4,6 @@ import Link from "next/link";
 import OpenCameraIcon from "../../public/assets/Membership/Card/OpenCameraIcon.svg";
 import ShowCodeIcon from "../../public/assets/Membership/Card/ShowCodeIcon.svg";
 import FakeCode from "../../public/assets/Membership/Card/FakeCode.svg";
-
 import FakeToggle from "../../public/assets/Membership/Card/FakeToggle.svg";
 import FakeSilverCard from "../../public/assets/Membership/Card/silver-card.webp";
 import FakeMemberInfo from "../../public/assets/Membership/Card/MemberInfoLink.svg";
