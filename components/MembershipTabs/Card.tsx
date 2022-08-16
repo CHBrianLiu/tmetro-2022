@@ -4,6 +4,7 @@ import Link from "next/link";
 import OpenCameraIcon from "../../public/assets/Membership/Card/OpenCameraIcon.svg";
 import ShowCodeIcon from "../../public/assets/Membership/Card/ShowCodeIcon.svg";
 import FakeCode from "../../public/assets/Membership/Card/FakeCode.svg";
+import FakeLimitedCode from "../../public/assets/Membership/Card/FakeLimitedCode.webp";
 import FakeToggle from "../../public/assets/Membership/Card/FakeToggle.svg";
 import FakeSilverCard from "../../public/assets/Membership/Card/silver-card.webp";
 import FakeMemberInfo from "../../public/assets/Membership/Card/MemberInfoLink.svg";
@@ -21,6 +22,7 @@ export const Card = () => {
               <Image src={FakeMemberInfo}></Image>
             </a>
           </Link>
+          <Image src={FakeLimitedCode}></Image>
         </div>
       </div>
       <div className={styles.ActionIconsGroup}>
@@ -32,20 +34,6 @@ export const Card = () => {
         </div>
       </div>
       <Image src={FakeCode} />
-      <div className={styles.PaymentMenu}>
-        <div className={styles.PaymentMenuItem}>
-          <div>捷客金</div>
-          <div className={styles.PaymentMenuItem_UseMoneyToggleSection}>
-            <div>折抵 NT $45</div>
-            <Image src={FakeToggle} />
-          </div>
-        </div>
-        <hr className={styles.PaymentMenuItemSeperator} />
-        <div className={styles.PaymentMenuItem}>
-          <div>我的優惠券</div>
-          <div>搜尋</div>
-        </div>
-      </div>
       {/* TODO: Coupon - i haven't figured out how to shape the div */}
     </div>
   );
