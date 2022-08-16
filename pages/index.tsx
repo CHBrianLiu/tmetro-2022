@@ -1,6 +1,7 @@
 import styles from "../styles/Home.module.css";
 import AdsImage from "../public/assets/index/ads.webp";
 import FakePoint from "../public/assets/index/fake-point-info.webp";
+import ShortCutImage from "../public/assets/index/fake-shortcut.webp";
 import IndexMidTab1 from "../public/assets/index/shortcuts/myticket.svg";
 import IndexMidTab2 from "../public/assets/index/shortcuts/arrivedtime.svg";
 import IndexMidTab3 from "../public/assets/index/shortcuts/roadinternet.svg";
@@ -27,30 +28,8 @@ const MemberInfo = () => {
   return <Image src={FakePoint} className={styles.MemberInfo} />;
 };
 
-type ShortcutItemProps = {
-  text: string;
-  image: string;
-};
-
-const ShortcutItem = ({ text, image }: ShortcutItemProps) => {
-  return (
-    <div className={styles.ShortcutItem}>
-      <Image src={image} className={styles.ShortcutIcon} />
-      {text}
-    </div>
-  );
-};
-
 const Shortcuts = () => {
-  return (
-    <div className={styles.ShortcutSection}>
-      <ShortcutItem text={"我的票卡"} image={IndexMidTab1} />
-      <ShortcutItem text={"到站時刻"} image={IndexMidTab2} />
-      <ShortcutItem text={"捷運路網"} image={IndexMidTab3} />
-      <ShortcutItem text={"我的優惠券"} image={IndexMidTab4} />
-      <ShortcutItem text={"成就徽章"} image={IndexMidTab5} />
-    </div>
-  );
+  return <Image src={ShortCutImage} className={styles.ShortcutSection} />;
 };
 
 const OnlineMall = ({ images }: { images: StaticImageData[] }) => {
