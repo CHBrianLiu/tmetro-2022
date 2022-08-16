@@ -1,4 +1,5 @@
 import styles from "./LastPageFrame.module.css";
+import styled from "styled-components";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -31,17 +32,30 @@ const Banner = ({ previousPageUrl, title }: BannerProps) => {
   );
 };
 
+const Background = styled.div`
+  background-color: #f1f1f1;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  z-index: -1;
+`;
+
 interface TopPageFrameProps extends BannerProps {
   children: React.ReactNode;
 }
 
-const Index = ({ previousPageUrl, title, children }: TopPageFrameProps) => {
+const LastPageFrame = ({
+  previousPageUrl,
+  title,
+  children,
+}: TopPageFrameProps) => {
   return (
     <div>
       <Banner previousPageUrl={previousPageUrl} title={title} />
-      <div>{children}</div>
+      <Background />
+      {children}
     </div>
   );
 };
 
-export default Index;
+export default LastPageFrame;
