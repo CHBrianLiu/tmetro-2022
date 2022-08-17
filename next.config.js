@@ -12,4 +12,8 @@ module.exports = withPWA({
     loader: "akamai",
     path: "",
   },
+  compiler: {
+    styledComponents: true,
+  },
+  reactStrictMode: true,
 });
