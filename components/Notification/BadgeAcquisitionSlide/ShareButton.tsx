@@ -30,7 +30,7 @@ const shareButtonClickHandler = async () => {
   const sharingData: Data = {
     title: "北捷通勤王",
     files: [badgeImageFile],
-    text: "跟你分享我的新徽章！",
+    text: "欸欸欸，你看你看，我是北捷通勤王！趕快一起加入我的行列搜集捷客徽章吧！",
   };
 
   try {
