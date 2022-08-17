@@ -32,6 +32,7 @@ const NoticeTextParagraph = styled.ol`
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  padding-left: 20px;
 `;
 
 const NoticeIconFrame = styled.div`
