@@ -4,7 +4,7 @@ import Menu from "../public/assets/banner.hamburger-menu.svg";
 import Notification from "../public/assets/banner.notification-bell.svg";
 import Image from "next/image";
 import { useState } from "react";
-import BadgeAcquisitionSlide from "./Notification/BadgeAcquisitionSlide";
+import BadgeAcquisitionSlide from "./Notification/Slides/BadgeAcquisitionSlide";
 
 const Banner = () => {
   const [isModalVisible, setModalVisibility] = useState(false);
