@@ -20,12 +20,11 @@ const tabs: Map<string, [string, () => JSX.Element]> = new Map([
   ["coupons", ["優惠券", Coupons]],
   ["points", ["捷客點", Points]],
   ["achievements", ["成就徽章", Achievements]],
-  ["purchases", ["消費記錄", Purchases]],
 ]);
 
 const ProfilePreview = () => {
   const Name = () => (
-    <span style={{ fontSize: "14px", fontWeight: 600 }}>布萊恩</span>
+    <span style={{ fontSize: "14px", fontWeight: 600 }}>森上梅友前</span>
   );
 
   return (

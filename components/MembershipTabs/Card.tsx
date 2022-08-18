@@ -21,6 +21,10 @@ export const Card = () => {
               <Image src={FakeMemberInfo}></Image>
             </a>
           </Link>
+          <Image src={"//assets/Membership/Card/FakeLimitedPic.webp"} 
+          width={"230px"}
+          height={"26px"}
+          ></Image>
         </div>
       </div>
       <div className={styles.ActionIconsGroup}>
