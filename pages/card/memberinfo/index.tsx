@@ -9,13 +9,7 @@ const ColdstoneCouponIntroductionPage = () => {
           src={"//assets/card/memberinfo/cardmemberinfo1.webp"}
           layout={"responsive"}
           width={"390px"}
-          height={"184px"}
-        />
-        <Image
-          src={"//assets/card/memberinfo/cardmemberinfo2.webp"}
-          layout={"responsive"}
-          width={"390px"}
-          height={"623px"}
+          height={"756px"}
         />
       </div>
     </LastPageFrame>
