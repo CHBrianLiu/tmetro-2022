@@ -4,17 +4,25 @@ import Menu from "../public/assets/banner.hamburger-menu.svg";
 import Notification from "../public/assets/banner.notification-bell.svg";
 import Image from "next/image";
 import { useState } from "react";
-import BadgeAcquisitionSlide from "./Notification/BadgeAcquisitionSlide";
+import BadgeAcquisitionSlide from "./Notification/Slides/BadgeAcquisitionSlide";
+import LevelUpSlide from "./Notification/Slides/LevelUpSlide";
 
 const Banner = () => {
-  const [isModalVisible, setModalVisibility] = useState(false);
+  const [isBadgeModalVisible, setBadgeModalVisibility] = useState(false);
+  const [isLevelUpModalVisible, setLevelUpModalVisibility] = useState(false);
 
-  const openModal = () => {
-    console.warn("open");
-    setModalVisibility(true);
+  const openBadgeModal = () => {
+    setBadgeModalVisibility(true);
   };
-  const closeModal = () => {
-    setModalVisibility(false);
+  const closeBadgeModal = () => {
+    setBadgeModalVisibility(false);
+  };
+
+  const openLevelUpModal = () => {
+    setLevelUpModalVisibility(true);
+  };
+  const closeLevelUpModal = () => {
+    setLevelUpModalVisibility(false);
   };
 
   return (
@@ -25,14 +33,25 @@ const Banner = () => {
           <Image
             src={Notification}
             className={styles.notification}
-            onClick={openModal}
+            alt={"notification icon"}
+            onClick={openBadgeModal}
           />
-          <Image src={Menu} className={styles.menu} />
+          <Image
+            src={Menu}
+            className={styles.menu}
+            onClick={openLevelUpModal}
+            alt={"menu icon"}
+          />
         </div>
       </div>
-      {isModalVisible ? (
+      {isBadgeModalVisible ? (
         <div style={{ zIndex: 1 }}>
-          <BadgeAcquisitionSlide closeModal={closeModal} />
+          <BadgeAcquisitionSlide closeModal={closeBadgeModal} />
+        </div>
+      ) : null}
+      {isLevelUpModalVisible ? (
+        <div style={{ zIndex: 1 }}>
+          <LevelUpSlide closeModal={closeLevelUpModal} />
         </div>
       ) : null}
     </div>

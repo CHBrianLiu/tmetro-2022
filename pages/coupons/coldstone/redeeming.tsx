@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { useState } from "react";
 import LastPageFrame from "../../../components/LastPageFrame";
 import Image from "next/image";
-import CloseButton from "../../../components/Notification/BadgeAcquisitionSlide/CloseButton";
+import CloseButton from "../../../components/Notification/Slides/BadgeAcquisitionSlide/CloseButton";
 import Link from "next/link";
 
 /* TODO: Separate modal component out*/
