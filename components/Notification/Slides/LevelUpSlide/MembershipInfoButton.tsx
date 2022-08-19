@@ -3,20 +3,22 @@ import Image from "next/image";
 import Link from "next/link";
 
 const AllBadgesButtonFrame = styled.div`
-  width: 100%;
+  width: 71.8%;
 `;
 
-export default function AllBadgesButton(props: { closeModal: () => void }) {
+export default function MembershipInfoButton(props: {
+  closeModal: () => void;
+}) {
   return (
     <AllBadgesButtonFrame onClick={props.closeModal}>
-      <Link href={"/membership?tab=achievements"}>
+      <Link href={"/card/memberinfo"}>
         <a>
           <Image
             src={
-              "//assets/notification/badge-acquisition-slide/all-badges.webp"
+              "//assets/notification/level-up-slide/membership-info-button.webp"
             }
-            width={810}
-            height={108}
+            width={840}
+            height={111}
             layout={"responsive"}
             alt={"all badges"}
           />

@@ -2,10 +2,9 @@ import { useState, useEffect } from "react";
 import styled from "styled-components";
 import SlideBackgroundImage from "./SlideBackgroundImage";
 import DragIndicator from "./DragIndicator";
-import Badge from "./Badge";
-import ShareButton from "./ShareButton";
-import AllBadgesButton from "./AllBadgesButton";
+import MembershipInfoButton from "./MembershipInfoButton";
 import CloseButton from "./CloseButton";
+import Image from "next/image";
 
 interface SlideProps {
   closeModal: () => void;
@@ -39,16 +38,59 @@ const SlideContainer = styled.div`
   gap: 45px;
 `;
 
-const ActionItemsGroup = styled.div`
-  width: 71.8%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: space-between;
-  align-items: center;
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
+const CongratsTitle = styled.div`
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: 0.38px;
 `;
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+const CardFrame = styled.div`
+  width: 85%;
+`;
+
+const CongratsWords = styled.div`
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  letter-spacing: 0.38px;
+`;
+
+function Card() {
+  return (
+    <CardFrame>
+      <Image
+        src={"//assets/notification/level-up-slide/gold-card.webp"}
+        height={522}
+        width={996}
+        layout={"responsive"}
+        alt={"gold card"}
+      />
+    </CardFrame>
+  );
+}
+
+const RewardFrame = styled.div`
+  width: 31%;
+`;
+
+const Reward = () => {
+  return (
+    <RewardFrame>
+      <Image
+        src={"//assets/notification/level-up-slide/point-acquiring.webp"}
+        width={363}
+        height={84}
+        alt={"reward"}
+        layout={"responsive"}
+      />
+    </RewardFrame>
+  );
+};
 
 const LevelUpSlide = ({ closeModal }: SlideProps) => {
   const [isExpanded, setExpanded] = useState(false);
@@ -69,11 +111,19 @@ const LevelUpSlide = ({ closeModal }: SlideProps) => {
         <SlideBackgroundImage />
         <DragIndicator />
         <CloseButton onClick={closeModalWithAnimation} />
-        <Badge />
-        <ActionItemsGroup>
-          <ShareButton />
-          <AllBadgesButton closeModal={closeModalWithAnimation} />
-        </ActionItemsGroup>
+        <CongratsTitle>
+          恭喜您！
+          <br />
+          升等為金卡會員！
+        </CongratsTitle>
+        <Card />
+        <CongratsWords>
+          恭喜你！您已達到金卡會員資格！
+          <br />
+          您可立即享有金卡會員的優惠。
+        </CongratsWords>
+        <Reward />
+        <MembershipInfoButton closeModal={closeModalWithAnimation} />
       </SlideContainer>
     </ShallowBackground>
   );
