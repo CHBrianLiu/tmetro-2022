@@ -4,15 +4,25 @@ import Link from "next/link";
 import AchieveFacePic1 from "../../public/assets/Membership/Achievements/achievement1.webp";
 import AchieveFacePic2 from "../../public/assets/Membership/Achievements/achievement2.webp";
 import AchieveFacePic3 from "../../public/assets/Membership/Achievements/achievement3.webp";
+import ContentTitle from "../../public/assets/Membership/Achievements/contenttitle.webp";
 import LearnMore from "../../public/assets/Membership/Achievements/learn-more.webp";
 
 export const Achievements = () => {
   return (
     <div className={styles.container}>
-      <h2>我的成就徽章</h2>
-      <h3>已獲得3項徽章</h3>
+      <div className={styles.TitlePic}>
+      <Image
+          src={ContentTitle}
+          width={"108px"}
+          height={"49px"}
+        />
+      </div>
       <div className={styles.PointRecords}>
-        <Image src={AchieveFacePic1} />
+        <Image 
+          src={AchieveFacePic1} 
+          width={"358px"}
+          height={"100px"}
+          />
         <Image src={AchieveFacePic2} />
         <Image src={AchieveFacePic3} />
       </div>
