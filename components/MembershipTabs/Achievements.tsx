@@ -4,7 +4,6 @@ import Link from "next/link";
 import AchieveFacePic1 from "../../public/assets/Membership/Achievements/achievement1.webp";
 import AchieveFacePic2 from "../../public/assets/Membership/Achievements/achievement2.webp";
 import AchieveFacePic3 from "../../public/assets/Membership/Achievements/achievement3.webp";
-import ContentTitle from "../../public/assets/Membership/Achievements/contenttitle.webp";
 import LearnMore from "../../public/assets/Membership/Achievements/learn-more.webp";
 
 export const Achievements = () => {
@@ -12,7 +11,7 @@ export const Achievements = () => {
     <div className={styles.container}>
       <div className={styles.TitlePic}>
       <Image
-          src={ContentTitle}
+          src={"//assets/Membership/Achievements/contenttitle.webp"}
           width={"108px"}
           height={"49px"}
         />
