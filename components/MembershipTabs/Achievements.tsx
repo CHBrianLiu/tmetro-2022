@@ -10,18 +10,14 @@ export const Achievements = () => {
   return (
     <div className={styles.container}>
       <div className={styles.TitlePic}>
-      <Image
+        <Image
           src={"//assets/Membership/Achievements/contenttitle.webp"}
           width={"108px"}
           height={"49px"}
         />
       </div>
       <div className={styles.PointRecords}>
-        <Image 
-          src={AchieveFacePic1} 
-          width={"358px"}
-          height={"100px"}
-          />
+        <Image src={AchieveFacePic1} width={"358px"} height={"100px"} />
         <Image src={AchieveFacePic2} />
         <Image src={AchieveFacePic3} />
       </div>
