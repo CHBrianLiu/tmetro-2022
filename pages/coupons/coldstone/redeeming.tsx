@@ -53,12 +53,13 @@ const ModalBackground = styled.div`
   top: 0;
   z-index: 1;
   background: rgba(15, 15, 15, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ModalWindow = styled.div`
-  top: 19.7%;
-  height: calc(100vh - 2 * (19.7%));
-  left: 4.6%;
   width: calc(100vw - 2 * (4.6%));
   z-index: 2;
   background: #ffffff;
