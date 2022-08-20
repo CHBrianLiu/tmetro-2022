@@ -63,7 +63,12 @@ const SectionLayout = styled.div`
 const Section = (props: {
   title: string;
   description: string;
-  badgeCollection: { path: string; height: number; width: number };
+  badgeCollection: {
+    path: string;
+    height: number;
+    width: number;
+    linkToPath?: string;
+  };
 }) => {
   return (
     <SectionLayout>
@@ -74,13 +79,27 @@ const Section = (props: {
           <ShowMoreButton />
         </SectionDescriptionRowLayout>
       </SectionTitleLayout>
-      <Image
-        src={props.badgeCollection.path}
-        width={props.badgeCollection.width}
-        height={props.badgeCollection.height}
-        layout={"fixed"}
-        alt={"badges"}
-      />
+      {props.badgeCollection.linkToPath !== undefined ? (
+        <Link href={props.badgeCollection.linkToPath}>
+          <a>
+            <Image
+              src={props.badgeCollection.path}
+              width={props.badgeCollection.width}
+              height={props.badgeCollection.height}
+              layout={"fixed"}
+              alt={"badges"}
+            />
+          </a>
+        </Link>
+      ) : (
+        <Image
+          src={props.badgeCollection.path}
+          width={props.badgeCollection.width}
+          height={props.badgeCollection.height}
+          layout={"fixed"}
+          alt={"badges"}
+        />
+      )}
     </SectionLayout>
   );
 };
@@ -108,9 +127,9 @@ const BadgesLearnMorePage = () => {
             path: "//assets/achievements/learnmore/achievements_learnmore2.webp",
             width: 385,
             height: 144,
+            linkToPath: "/achievements/learnmore/badge",
           }}
         />
-        {/*link: /achievements/learnmore/badge*/}
         <Section
           title={"推薦徽章"}
           description={"看起來您很適合這些徽章！"}
