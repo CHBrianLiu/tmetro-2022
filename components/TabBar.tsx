@@ -1,33 +1,22 @@
+import styled from "styled-components";
 import styles from "../styles/TabBar.module.css";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Home from "../public/assets/tabbar.home.svg";
-import Restaurant from "../public/assets/tabbar.restaurant.svg";
-import Shopping from "../public/assets/tabbar.shopping.svg";
-import Service from "../public/assets/tabbar.service.svg";
-import Membership from "../public/assets/tabbar.membership.svg";
 
-type FakeButtonProps = {
+interface FakeButtonProps {
   imageSrc: string;
   text: string;
-};
+}
 
 const FakeButton = ({ imageSrc, text }: FakeButtonProps) => {
-  return (
-    <div className={styles.button}>
-      <Image src={imageSrc} alt={text} className={styles.ButtonImage} />
-      {text}
-    </div>
-  );
+  return <Image src={imageSrc} alt={text} height={49} width={74} />;
 };
 
-type MenuButtonProps = {
-  imageSrc: string;
-  text: string;
+interface MenuButtonProps extends FakeButtonProps {
   link: string;
   selected: boolean;
-};
+}
 
 const MenuButton = ({ imageSrc, text, link, selected }: MenuButtonProps) => {
   const buttonClasses = [styles.button];
@@ -35,9 +24,8 @@ const MenuButton = ({ imageSrc, text, link, selected }: MenuButtonProps) => {
   return (
     <div className={buttonClasses.join(" ")}>
       <Link href={link} passHref>
-        <a className={styles.button}>
-          <Image src={imageSrc} alt={text} />
-          {text}
+        <a>
+          <Image src={imageSrc} alt={text} height={49} width={74} />
         </a>
       </Link>
     </div>
@@ -51,18 +39,21 @@ const TabBar = () => {
       {/* TODO: values in `link` and `selected` props are duplicated.
                 find a better way to construct them. */}
       <MenuButton
-        imageSrc={Home}
+        imageSrc={"//assets/tab-bar/home.svg"}
         text={"Home"}
         link={"/"}
         selected={router.pathname === "/"}
       />
-      <FakeButton imageSrc={Restaurant} text={"捷客鮮"} />
-      <FakeButton imageSrc={Shopping} text={"線上商城"} />
-      <FakeButton imageSrc={Service} text={"溫馨服務"} />
+      <FakeButton
+        imageSrc={"//assets/tab-bar/online-mall.svg"}
+        text={"線上商城"}
+      />
+      <FakeButton imageSrc={"//assets/tab-bar/map.svg"} text={"捷運路網"} />
+      <FakeButton imageSrc={"//assets/tab-bar/service.svg"} text={"溫馨服務"} />
       {/* TODO: values in `link` and `selected` props are duplicated.
                 find a better way to construct them. */}
       <MenuButton
-        imageSrc={Membership}
+        imageSrc={"//assets/tab-bar/membership.svg"}
         text={"會員中心"}
         link={"/membership"}
         selected={router.pathname === "/membership"}

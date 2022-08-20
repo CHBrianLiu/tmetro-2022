@@ -4,7 +4,7 @@
     position: fixed;
     bottom: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
     background: #f7f7f8;
     z-index: 0;
