@@ -28,3 +28,15 @@ jobs:
           node-version: 16
       - run: "npm install -g prettier"
       - run: "npm run check-format"
+
+  build-dry-run:
+    runs-on: ubuntu-latest
+    name: "Build dry run"
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: "npm install"
+      - id: lint
+        run: "npm run build"
