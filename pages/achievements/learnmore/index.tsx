@@ -125,7 +125,7 @@ const BadgesLearnMorePage = () => {
           description={"最多人獲得的徽章，一起加入吧！"}
           badgeCollection={{
             path: "//assets/achievements/learnmore/achievements_learnmore2.webp",
-            width: 385,
+            width: 407,
             height: 144,
             linkToPath: "/achievements/learnmore/badge",
           }}
@@ -135,7 +135,7 @@ const BadgesLearnMorePage = () => {
           description={"看起來您很適合這些徽章！"}
           badgeCollection={{
             path: "//assets/achievements/learnmore/achievements_learnmore3.webp",
-            width: 385,
+            width: 422,
             height: 144,
           }}
         />
