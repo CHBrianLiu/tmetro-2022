@@ -18,8 +18,8 @@ export const Achievements = () => {
       </div>
       <div className={styles.PointRecords}>
         <Image src={AchieveFacePic1} width={"358px"} height={"100px"} />
-        <Image src={AchieveFacePic2} />
-        <Image src={AchieveFacePic3} />
+        <Image src={AchieveFacePic2} width={"358px"} height={"100px"} />
+        <Image src={AchieveFacePic3} width={"358px"} height={"100px"} />
       </div>
       <div className={styles.LearnMoreButton}>
         <Link href={"/achievements/learnmore"}>
