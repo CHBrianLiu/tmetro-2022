@@ -12,7 +12,7 @@ export const Points = () => {
     <div className={styles.container}>
       <Image src={FakePointStatus} />
       <div className={styles.PointRecordsViewer}>
-        <Image src={FakeDateSelector} />
+        <Image src={FakeDateSelector} width={"366px"} height={"40px"} />
         <div className={styles.PointRecords}>
           <Image src={FakePointRecord052001} width={"366px"} height={"94px"} />
           <Image src={FakePointRecord052002} width={"366px"} height={"94px"} />
